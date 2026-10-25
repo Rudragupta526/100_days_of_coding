@@ -1,0 +1,24 @@
+#include<stdio.h>
+void reverse(int arr[],int n);
+void printrev(int arr[],int n);
+int main(){
+int arr[]= {1,2,3,4,5,6};
+reverse(arr,6);
+printrev(arr,6);
+return 0;
+}
+void reverse(int arr[],int n){
+int t;
+int i;
+for(i = 0;i < 3;i ++){
+t = arr[i];
+arr[i] = arr[n - i - 1];
+arr[n - i - 1] = t;
+}
+}
+void printrev(int arr[],int n){
+int i;
+for(i= 0;i < n;i ++){
+printf("%d",arr[i]);
+}
+}
